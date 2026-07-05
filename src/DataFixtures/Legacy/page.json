@@ -1,0 +1,404 @@
+[
+    {
+        "locale": "en",
+        "slug": "artists",
+        "parentSlug": null,
+        "template": "overview",
+        "title": "Artists",
+        "url": "/artists",
+        "subtitle": "Discover our roster of talented musicians",
+        "headerImage": "artists.jpg",
+        "element": {
+            "type": "pages",
+            "pages": {
+                "sortBy": "published",
+                "sortMethod": "asc"
+            }
+        }
+    },
+    {
+        "locale": "de",
+        "slug": "artists",
+        "parentSlug": null,
+        "template": "overview",
+        "title": "Musiker",
+        "url": "/musiker",
+        "subtitle": "Entdecke unsere Vielfalt an talentierten Musiker",
+        "headerImage": "artists.jpg",
+        "element": {
+            "type": "pages",
+            "pages": {
+                "sortBy": "published",
+                "sortMethod": "asc"
+            }
+        }
+    },
+    {
+        "locale": "en",
+        "slug": "civil-literature",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "Civil Literature",
+        "url": "/artists/civil-literature",
+        "headerImage": "civil-literature.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "Civil Literature",
+                "description": "<p>After releasing their record album in 2014, Marshall Plan spent more than one year bringing their passion for the rock music to the big concerthalls and arenas all over Great Britain – in 2015 worldwide. In this time the rockband started to grow together and wrote there second album.</p><p>In 2010 Liam, the frontman of Civil Literature founded the band with his brother Garry, a well known guitar player and songwriter in Manchester. In 2011 Marc followed. His talent in playing the bass fullfilled the intense music vibes. Together they had one big dream: rocking the stage of the Royal Albert Hall. In 2016 they are as close as never before. With their new album, reaching records in Europe.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "I have always been a passionated songwriter. My greatest fullfillment is to touch people with my messages and to encourage them to live their dreams.",
+                "quoteReference": "Liam Hendrickson"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Vikings",
+                    "Civilwar",
+                    "collapse",
+                    "#no more"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "de",
+        "slug": "civil-literature",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "Civil Literature",
+        "url": "/musiker/civil-literature",
+        "headerImage": "civil-literature.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "Civil Literature",
+                "description": "<p>Nach dem release ihres neuen Albums 2014, verbrachte Civil Literature mehr als ein Jahr damit, auf den großen Bühnen der riesigen Hallen in Großbritanien, ihre Leidenschaft für die Rock Musik zu teilen - und 2015 dann sogar weltweit. In dieser Zeit wuchs die Rockband noch enger zusammen und schrieb ihr drittes Album.</p><p>Im Jahr 2010 gründete Liam, der Frontsänger der Band Civil Literature die Band mit seinem Bruder Garry, der in Manchester auch als Gitarrist und Songschreiber bekannt ist. Im Jahr 2011 folgte dann Marc. Sein Talent als Bass Spieler ergänzt sich perfekt zu der Musik die sie machten. Zusammen hatten sie einen großen Traum. Sie wollen zusammen die Bühne der Royal Albert Halle rocken. Im Jahr 2016 stehen sie vor diesem Ziel nun so kurz bevor. Vorallem deshalb, weil ihr neues Album Rekorde in ganz Europa bricht.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "Ich war schon immer ein leidenschaftlicher Song Schreiber. Mein größter Wunsch ist es die Menschen zu berühren und mit meiner Botschaft ermutigen nach ihren Träumen zu leben.",
+                "quoteReference": "Liam Hendrickson"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Vikings",
+                    "Civilwar",
+                    "collapse",
+                    "#no more"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "en",
+        "slug": "coyoos",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "Coyoos",
+        "url": "/artists/coyoos",
+        "headerImage": "coyoos.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "Coyoos",
+                "description": "<p>After releasing their record album in 2012, Coyoos spent more than one year bringing their passion for the folk music to the big concerthalls and arenas all over the United States – in 2015 worldwide. In this time the folkband started to grow together and wrote there second album.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "Travelling and singing is all I need. Discover new places and meeting inspiring people are the experiences you never forget. It is my source of creativity and inspiration.",
+                "quoteReference": "Jack"
+            },
+            {
+                "type": "text",
+                "description": "<p>In 2014 Jack started his music career in San Diego, California. His talent in playing the guitar made him famous in a short period of time. His one big dream: touring around the United States. In 2016 he is as close as never before – with his new album, reaching records in the US.</p>"
+            },
+            {
+                "type": "image-map",
+                "imageMap": {
+                    "imageId": "band.jpg",
+                    "hotspots": [
+                        {
+                            "type": "basic",
+                            "hotspot": {
+                                "type": "circle",
+                                "left": 0.5052987808664333,
+                                "top": 0.5940029375917998,
+                                "radius": 0.09
+                            },
+                            "title": "Lead Singer",
+                            "description": "This is our lead singer"
+                        },
+                        {
+                            "type": "basic",
+                            "hotspot": {
+                                "type": "circle",
+                                "left": 0.2867240701260532,
+                                "top": 0.6000031250976593,
+                                "radius": 0.09
+                            },
+                            "title": "Basist",
+                            "description": "This is our basist"
+                        },
+                        {
+                            "type": "basic",
+                            "hotspot": {
+                                "type": "circle",
+                                "left": 0.7927576428704489,
+                                "top": 0.5880027500859402,
+                                "radius": 0.09
+                            },
+                            "title": "Guitarist",
+                            "description": "This is our guitarist"
+                        },
+                        {
+                            "type": "advanced",
+                            "hotspot": {
+                                "type": "rectangle",
+                                "width": 1,
+                                "height": 0.20797524922653826,
+                                "left": 0,
+                                "top": 0.7920247507734617
+                            },
+                            "text": "This was an <b>awesome</b> crowd"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Wildfire",
+                    "Cross the River",
+                    "Gold Digger",
+                    "The Wolves"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "de",
+        "slug": "coyoos",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "Coyoos",
+        "url": "/musiker/coyoos",
+        "headerImage": "coyoos.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "Coyoos",
+                "description": "<p>Nach dem release ihres neuen Albums 2012, verbrachte Coyoos mehr als ein Jahr damit, auf den großen Bühnen der riesigen Hallen in den Vereinigten Staaten, ihre Leidenschaft für die Rock Musik zu teilen - und 2015 dann sogar weltweit. In dieser Zeit wuchs die Rockband noch enger zusammen und schrieb ihr drittes Album.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "Neue Orte zu entdecken und inspirierende Leute kennenzulernen sind Erfahrungen, die man nie vergisst. Sie sind die Quelle meiner Kreativität und Inspiration.",
+                "quoteReference": "Jack"
+            },
+            {
+                "type": "text",
+                "description": "<p>2014 startete Jack seine Musikkarriere in San Diego, California. Sein Talent mit der Gitarre lies ihn in kurzer Zeit bekannt werden. Sein großer Traum: In einer Tour durch die Vereinigten Staaten reisen. 2016 ist er so nah an seinem Ziel wie noch nie zuvor - mit seinem neuen Album erreichte er die Spitze der Charts in den Vereinigten Staaten.</p>"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Wildfire",
+                    "Cross the River",
+                    "Gold Digger",
+                    "The Wolves"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "en",
+        "slug": "marshall-plan",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "Marshall Plan",
+        "url": "/artists/marshall-plan",
+        "headerImage": "marshall.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "Marshall Plan",
+                "description": "<p>Releasing their record album in 2003, Marshall Plan spent more than one year bringing their passion for the rock music to the big concerthalls and arenas all over Great Britain – in 2015 worldwide. In this time the rockband started to grow together and wrote there second album.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "We love making music together and to inspire people around us with our songs. We come from a small town in the UK. It still feels unreal, to be known from Asia to the States.",
+                "quoteReference": "Jason Mcconkey"
+            },
+            {
+                "type": "text",
+                "description": "<p>In 2003 Alex, the frontman of Marshall Plan founded the band with his best friends Bronson, Albert and Ray. Those well known guitar player and songwriter in Liverpool. In 2007 Jason followed. His talent in playing the bass fullfilled the intense music vibes. Together they had one big dream: rocking the stage in front of the Times Square in New York. In 2016 they are as close as never before. With their new album, reaching records all over the world.</p>"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Way",
+                    "let the light be",
+                    "Variety",
+                    "Path"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "de",
+        "slug": "marshall-plan",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "Marshall Plan",
+        "url": "/musiker/marshall-plan",
+        "headerImage": "marshall.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "Marshall Plan",
+                "description": "<p>Nach dem Release ihres neuen Albums 2003, verbrachte Civil Literature mehr als ein Jahr damit, auf den großen Bühnen der riesigen Hallen in Großbritanien, ihre Leidenschaft für die Rock Musik zu teilen - und 2015 dann sogar weltweit. In dieser Zeit wuchs die Rockband noch enger zusammen und schrieb ihr zweites Album.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "Wir lieben es, zusammen Musik zu machen und die Menschen um uns herum mit unseren Songs zu inspirieren. Wir kommen aus einem kleinen Dorf in Großbritannien. Es fühlt sich surreal an, dass wir uns einen Namen von Asien bis zu den Staaten gemacht haben.",
+                "quoteReference": "Jason Mcconkey"
+            },
+            {
+                "type": "text",
+                "description": "<p>2003 gründete Alex, der Frontman von Marshall Plan die Band mit seinen besten freunden Albert und Ray, ein in Liverpool bekannter Gitarrenspieler und Songschreiber. 2007 folgte dann Jason. Sein Talent mit dem Bass war genau das richtige für die intensiven Vibes der Band. Sie hatten einen großen Traum zusammen: Die Bühne vor dem Times Square in New York zu rocken. 2016 sind sie so nah an ihrem Ziel wie noch nie zuvor - mit ihrem neuen Album erreichten sie die Spitze der Charts in den Vereinigten Staaten.</p>"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Way",
+                    "let the light be",
+                    "Variety",
+                    "Path"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "en",
+        "slug": "the-bagpipes",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "The Bagpipes",
+        "url": "/artists/the-bagpipes",
+        "headerImage": "dudelsack.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "The Bagpipes",
+                "description": "<p>In the beginning they focused on traditional and contemporary music with innovative flair, before they concetrated on there classic bagpipe music. Short after releasing their record album in 1998, The Bagpipes spent more than one year bringing their passion for the folk music to the big concerthalls and arenas all over Scottland – in 2015 worldwide. In this time the folkband started to grow together and wrote there fourth album. Soon they become the Scottish folkband of the year 2003, 2005 and 2014.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "We started our career in the streets of Glasgow. There is nothing more real and authentic then playing street music. People like you, or they don't and pass you. You immediately get the reaction.",
+                "quoteReference": "Steve Avril"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Joy",
+                    "Busk",
+                    "Bonfire",
+                    "Scottlang Call's"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "de",
+        "slug": "the-bagpipes",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "The Bagpipes",
+        "url": "/musiker/the-bagpipes",
+        "headerImage": "dudelsack.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "The Bagpipes",
+                "description": "<p>In den Anfängen haben sich die Bagpipes auf traditionelle und zeitnahe Musik mit ihrem innovativen Flair konzentriert, bevor sie sich dann auf ihre klassische Dudelsackmusik stürtzten. Kurz nach der Veröffentlichung ihres Albums in 1998, haben die Bagpipes mehr als ein Jahr zusammen damit verbracht, ihre Leidenschaft auf die Bühnen und Arenen Schottlands zu bringen - in 2015 dann Weltweit. In dieser Zeit wuchs die Folkband noch enger zusammen und schrieb ihr viertes Album. Sie wurden die Schottische Folkband von den Jahren 2003, 2005 und 2014.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "Unsere Karriere startete auf den Straßen von Glasgow. Es gibt nichts authentischeres als Straßenmusik. Die Menschen mögen dich, oder laufen einfach weiter. Man merkt sofort, wie die Musik ankommt.",
+                "quoteReference": "Steve Avril"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Joy",
+                    "Busk",
+                    "Bonfire",
+                    "Scottlang Call's"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "en",
+        "slug": "tj-fury",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "TJ Fury",
+        "url": "/artists/tj-fury",
+        "headerImage": "tj-fury.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "TJ Fury",
+                "description": "<p>In the beginning he focused on combinations between music and Hip Hop. Today he concentrated on stong powerful Lines in the scene of Hip Hop. After releasing his record album in 2011, TJ Fury spent more than one year bringing his passion for Hip Hop to the downtown clubs all around the big cities in the United States – in 2015 worldwide. In this time TJ Fury started to record their new album. Soon they got several awards.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "We love making music. Check out our new tracks.",
+                "quoteReference": "TJ Fury"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Rebel",
+                    "random",
+                    "down_town",
+                    "Railling"
+                ]
+            }
+        ]
+    },
+    {
+        "locale": "de",
+        "slug": "tj-fury",
+        "parentSlug": "artists",
+        "template": "default",
+        "title": "TJ Fury",
+        "url": "/musiker/tj-fury",
+        "headerImage": "tj-fury.jpg",
+        "blocks": [
+            {
+                "type": "text",
+                "title": "TJ Fury",
+                "description": "<p>In den Anfängen hat sich TJ Fury auf Kombinationen von zeitnaher Musik und Hip Hop fokusiert. Heute konzentriert er sich auf kraftvolle Texte in der Hip Hop Szene. Nach der Veröffentlichung seines Albums in 2011, hat TJ Fury mehr als ein Jahr damit verbracht seine Leidenschaft für Hip Hop in die Clubs der größen Städte rundum den Staaten zu bringen - in 2015 dann Weltweit. Zu dieser Zeit nahm TJ Fury sein neues Album auf. Bald wurde er für zahlreiche Auszeichnungen nominiert und gewann einige davon.</p>"
+            },
+            {
+                "type": "quote",
+                "quote": "Wir lieben es, Musik zu kreieren. Hört euch unsere neuen Tracks an.",
+                "quoteReference": "TJ Fury"
+            },
+            {
+                "type": "albums",
+                "albums": [
+                    "Rebel",
+                    "random",
+                    "down_town",
+                    "Railling"
+                ]
+            }
+        ]
+    }
+]

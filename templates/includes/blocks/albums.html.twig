@@ -1,29 +1,30 @@
-{% set tabsId = register_component('tabs', {hash: true}) %}
-
-<div class="albums">
+<div class="albums" data-controller="tabs" data-tabs-hash-value="true">
     <h2 class="albums__title">{{ 'albums'|trans }}</h2>
 
     <div class="albums__wrapper">
-        <div class="albums__links" id="{{ tabsId }}">
+        <div class="albums__links">
             {% for album in content.albums %}
-                <div class="albums__link" data-name="{{ album.title }}">
-                    {# @see https://docs.sulu.io/en/2.2/reference/twig-extensions/functions/sulu_resolve_media.html #}
+                <button type="button"
+                        class="albums__link"
+                        data-tabs-target="tab"
+                        data-action="tabs#choose"
+                        data-name="{{ album.title }}">
                     {% set image = sulu_resolve_media(album.image, app.request.locale) %}
-
-                    {# @see https://github.com/sulu/web-twig/blob/v2.4.0/docs/image.md #}
-                    {{ get_image(image, '400x400') }}
-                </div>
+                    {% if image %}
+                        <img src="{{ sulu_get_media_url(image) }}" alt="{{ album.title }}">
+                    {% endif %}
+                </button>
             {% endfor %}
         </div>
 
-        <div class="albums__containers" id="{{ tabsId }}-container">
+        <div class="albums__containers">
             {% for album in content.albums %}
-                <div class="albums__container">
+                <div class="albums__container" data-tabs-target="panel">
                     <h3 class="albums__album-title">{{ album.title }}</h3>
                     <ul class="albums__track-list">
                         {% for track in album.tracklist %}
                             <li>
-                                <span class="albums__track-list-index">{{ (loop.index) ~ '. ' }}</span>
+                                <span class="albums__track-list-index">{{ loop.index ~ '. ' }}</span>
                                 {{ track.title }}
                             </li>
                         {% endfor %}

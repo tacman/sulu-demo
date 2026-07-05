@@ -7,8 +7,7 @@
 
             {% if image %}
                 <div class="article-list__item-image">
-                    {# @see https://github.com/sulu/web-twig/blob/v2.4.0/docs/image.md #}
-                    {{ get_image(image, '600x400') }}
+                    <img src="{{ sulu_get_media_url(image) }}" alt="{{ article.excerpt.title|default(article.title) }}">
                 </div>
             {% endif %}
 

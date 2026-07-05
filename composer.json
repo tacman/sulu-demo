@@ -8,41 +8,37 @@
         "php": "^8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/doctrine-bundle": "^2.13",
+        "cmsig/seal-loupe-adapter": "^0.12",
+        "doctrine/doctrine-bundle": "^3.1 || ^4.0",
         "doctrine/doctrine-fixtures-bundle": "^3.6 || ^4.0",
         "elasticsearch/elasticsearch": "7.17.*",
-        "friendsofsymfony/http-cache-bundle": "^3.0",
+        "friendsofsymfony/http-cache-bundle": "^3.3",
         "handcraftedinthealps/zendsearch": "^2.1",
         "jackalope/jackalope-doctrine-dbal": "^1.10 || ^2.0",
         "jackalope/jackalope-jackrabbit": "^2.0",
-        "league/flysystem": "^1.1",
-        "league/flysystem-aws-s3-v3": "^1.0",
-        "phpcr/phpcr-migrations-bundle": "^1.5",
-        "phpcr/phpcr-shell": "^1.6",
+        "league/flysystem": "^3.0",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "predis/predis": "^1.1",
         "rokka/imagine-vips": "^0.40.0",
-        "scheb/2fa-bundle": "^7.2",
-        "scheb/2fa-email": "^7.2",
-        "scheb/2fa-trusted-device": "^7.2",
+        "scheb/2fa-bundle": "^8.0",
+        "scheb/2fa-email": "^8.0",
+        "scheb/2fa-trusted-device": "^8.0",
         "sentry/sentry-symfony": "^5.8",
         "stof/doctrine-extensions-bundle": "^1.8",
-        "sulu/article-bundle": "2.6.*",
-        "sulu/automation-bundle": "^2.1",
-        "sulu/redirect-bundle": "^2.1.2",
-        "sulu/sulu": "^2.6.18",
-        "sulu/web-twig": "^2.4",
-        "symfony/config": "^7.4",
-        "symfony/dotenv": "^7.4",
+        "sulu/sulu": "dev-tac as 3.0.x-dev",
+        "symfony/asset-mapper": "^8.0",
+        "symfony/config": "^8.0",
+        "symfony/dotenv": "^8.0",
         "symfony/flex": "^1.17 || ^2.0",
-        "symfony/framework-bundle": "^7.4",
-        "symfony/mailer": "^7.4",
-        "symfony/monolog-bridge": "^7.4",
-        "symfony/monolog-bundle": "^3.4",
-        "symfony/runtime": "^7.4",
-        "symfony/security-bundle": "^7.4",
-        "symfony/twig-bundle": "^7.4",
-        "symfony/web-link": "^7.4",
-        "symfony/webpack-encore-bundle": "^2.0"
+        "symfony/framework-bundle": "^8.0",
+        "symfony/mailer": "^8.0",
+        "symfony/monolog-bridge": "^8.0",
+        "symfony/monolog-bundle": "^4.0",
+        "symfony/runtime": "^8.0",
+        "symfony/security-bundle": "^8.0",
+        "symfony/stimulus-bundle": "^3.0",
+        "symfony/twig-bundle": "^8.0",
+        "symfony/web-link": "^8.0"
     },
     "require-dev": {
         "jangregor/phpstan-prophecy": "^1.0",
@@ -57,13 +53,13 @@
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^1.0",
         "sulu/sulu-rector": "^1.0",
-        "symfony/browser-kit": "^7.4",
-        "symfony/css-selector": "^7.4",
-        "symfony/debug-bundle": "^7.4",
-        "symfony/error-handler": "^7.4",
-        "symfony/phpunit-bridge": "^7.4",
+        "symfony/browser-kit": "^8.0",
+        "symfony/css-selector": "^8.0",
+        "symfony/debug-bundle": "^8.0",
+        "symfony/error-handler": "^8.0",
+        "symfony/phpunit-bridge": "^8.0",
         "symfony/thanks": "^1.2",
-        "symfony/web-profiler-bundle": "^7.4",
+        "symfony/web-profiler-bundle": "^8.0",
         "thecodingmachine/phpstan-strict-rules": "^1.0"
     },
     "conflict": {
@@ -104,7 +100,7 @@
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
             "bin/websiteconsole cache:clear": "php-script",
             "bin/adminconsole sulu:media:init": "php-script",
-            "bin/adminconsole massive:search:init": "php-script"
+            "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -117,7 +113,6 @@
             "@php -r \"file_put_contents('.env', str_replace('APP_SECRET=\\'\\$ecretf0rt3st\\'', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env')));\""
         ],
         "post-create-project-cmd": [
-            "@php -r \"file_put_contents('.gitignore', str_replace(['composer.lock' . PHP_EOL, 'package-lock.json' . PHP_EOL, 'yarn.lock' . PHP_EOL, 'bun.lockb' . PHP_EOL, 'pnpm-lock.yaml' . PHP_EOL], '', file_get_contents('.gitignore')));\"",
             "@php bin/adminconsole sulu:admin:info --ansi"
         ],
         "serve": [
@@ -175,9 +170,6 @@
         ]
     },
     "config": {
-        "platform": {
-            "php": "8.2.19"
-        },
         "preferred-install": {
             "*": "dist"
         },
@@ -195,7 +187,12 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "7.4.*"
+            "require": "8.1.*"
         }
-    }
+    },
+    "repositories": [{
+        "name": "sulu",
+        "type": "path",
+        "url": "/home/tac/tacman/sulu"
+    }]
 }

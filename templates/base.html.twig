@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app.request.locale|split('_')[0] }}">
 <head>
-    {# @see https://docs.sulu.io/en/2.2/reference/twig-extensions/functions/sulu_snippet_load_by_area.html #}
     {% set webspaceSettings = sulu_snippet_load_by_area('webspace_settings') %}
 
     <meta charset="utf-8">
@@ -12,12 +11,8 @@
         {% include 'includes/meta.html.twig' %}
     {% endblock %}
 
-    {% block style -%}
-        {# only preload css as the js is not as important as the content and images #}
-        {% set assetCss = asset('build/website/app.css') %}
-        {% do preload(assetCss, {as: 'style'}) %}
-
-        {{ encore_entry_link_tags('app') }}
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
     {% endblock %}
 </head>
 <body>
@@ -45,15 +40,6 @@
 
     {% block footer %}
         {% include 'includes/footer.html.twig' %}
-    {% endblock %}
-
-    {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}
-
-        <script>
-            window.webComponents = {{ get_components() }};
-            window.webServices = {{ get_services() }};
-        </script>
     {% endblock %}
 </body>
 </html>

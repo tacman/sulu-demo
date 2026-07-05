@@ -1,0 +1,3 @@
+app_sulu_website_content:
+    resource: ../../src/Controller/Website/SuluRouteController.php
+    type: attribute

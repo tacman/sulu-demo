@@ -7,7 +7,7 @@
     <key>blog</key>
 
     <view>articles/blog</view>
-    <controller>Sulu\Bundle\ArticleBundle\Controller\WebsiteArticleController::indexAction</controller>
+    <controller>Sulu\Content\UserInterface\Controller\Website\ContentController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
@@ -31,13 +31,13 @@
             <tag name="sulu.rlp.part"/>
         </property>
 
-        <property name="routePath" type="route">
+        <property name="url" type="route">
             <meta>
                 <title lang="en">Resourcelocator</title>
                 <title lang="de">Adresse</title>
             </meta>
 
-            <tag name="sulu_article.article_route"/>
+            <tag name="sulu.rlp"/>
         </property>
 
         <section name="header">

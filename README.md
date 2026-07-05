@@ -76,6 +76,74 @@ Install the demo with all fixtures by running:
 bin/console sulu:build dev
 ```
 
+## Legacy content migration (JSON fixtures)
+
+When this demo was upgraded from Sulu 2 (PHPCR-backed pages/articles/snippets) to
+Sulu 3 (Doctrine-backed `Sulu\Article` / `Sulu\Page` / `Sulu\Content`), the old
+`Sulu\Bundle\PageBundle`, `Sulu\Bundle\ArticleBundle` and
+`Sulu\Bundle\DocumentManagerBundle` classes were removed entirely, which left
+the original `App\DataFixtures\Document\DocumentFixture` fixture unable to run
+(it referenced classes that no longer exist). Its content — the "Artists"
+pages and blog articles — is preserved as plain data and re-imported through
+Sulu 3's real content system instead.
+
+### How it works
+
+```
+src/DataFixtures/Legacy/*.json   (versioned snapshot, hand-ported from the
+        │                         old PHPCR fixture arrays)
+        │  app:legacy-fixtures-jsonl
+        ▼
+data/*.json                      (working directory, gitignored, regenerated
+        │                         on every run)
+        │  app:import-jsonl
+        ▼
+Database (ar_articles, pa_pages, ...)
+```
+
+* **`bin/console app:legacy-fixtures-jsonl`** copies the versioned snapshot
+  (`src/DataFixtures/Legacy/article.json`, `page.json`) into `data/`. This is
+  a separate step so `data/` can be regenerated, inspected, or hand-edited
+  without touching the checked-in source of truth. The dataset is small (a
+  few dozen rows), so it's plain `json_decode()`/`json_encode()` — no
+  streaming library needed. For a much larger dataset, reach for something
+  like [`halaxa/json-machine`](https://github.com/halaxa/json-machine)
+  (constant-memory JSON parsing) instead.
+
+* **`bin/console app:import-jsonl`** reads `data/*.json` and populates the
+  database by dispatching the **real** Sulu content messages — the same ones
+  the admin UI uses — instead of writing to any bespoke entity:
+  * `Sulu\Page\Application\Message\CreatePageMessage` /
+    `ModifyPageMessage` / `ApplyWorkflowTransitionPageMessage` for the
+    "Artists"/"Musiker" overview page and its 5 artist profile pages.
+  * `Sulu\Article\Application\Message\CreateArticleMessage` /
+    `ModifyArticleMessage` / `ApplyWorkflowTransitionArticleMessage` for the
+    5 blog articles.
+
+  Each entity is created once (first locale) and then modified for
+  additional locales, then published, mirroring how a real editor would use
+  the admin UI. Media (`headerImage`, excerpt images) and `albums` block
+  references are resolved from filenames/titles in the JSON to real
+  `Media`/`Album` IDs at import time via `App\Common\MediaLookup` and the
+  `Album` repository.
+
+### Usage
+
+```bash
+# 1. Load the base Sulu + album fixtures first (albums are referenced by title)
+bin/console doctrine:fixtures:load
+
+# 2. Regenerate data/*.json from the versioned snapshot
+bin/console app:legacy-fixtures-jsonl
+
+# 3. Import into the database via Sulu's content messages
+bin/console app:import-jsonl
+```
+
+`app:import-jsonl` is meant to run once against a fresh webspace: re-running
+it against already-imported data fails fast with a route-uniqueness
+violation rather than silently creating duplicates.
+
 ## Usage
 
 Now you can try out our demo, there is no need to configure a virtual host. Just use the build in web servers:

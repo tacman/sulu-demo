@@ -5,11 +5,9 @@
                 <div class="card__image-holder">
                     {% set image = page.excerptImages[0]|default(page.headerImage) %}
 
-                    {# @see https://github.com/sulu/web-twig/blob/v2.4.0/docs/image.md #}
-                    {{ get_image(image, {
-                        src: '600x400',
-                        class: 'card__image',
-                    }) }}
+                    {% if image %}
+                        <img src="{{ sulu_get_media_url(image) }}" alt="{{ page.excerptTitle|default(page.title) }}" class="card__image">
+                    {% endif %}
 
                     <div class="card__image-overlay">
                         <h2 class="card__image-title">{{ page.excerptTitle|default(page.title) }}</h2>

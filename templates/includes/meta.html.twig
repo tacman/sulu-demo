@@ -69,7 +69,7 @@
 } -%}
     {% block title %}
         {% if not seoTitle -%}
-            {% set seoTitle = app.request.pathInfo|split('/')|last|replace({'-': '_'})|humanize %}
+            {% set seoTitle = app.request.pathInfo|split('/')|last|replace({'-': ' ', '_': ' '})|title %}
         {%- endif -%}
         <title>{{ seoTitle }} - {{ metaClientName }}</title>
     {%- endblock -%}

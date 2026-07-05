@@ -6,6 +6,9 @@
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+imports:
+    - { resource: ../vendor/sulu/messenger/config/services.php }
+
 parameters:
     default_locale: en
 
@@ -27,8 +30,5 @@ services:
     App\Build\UserBuilder:
         decorates: sulu_security.build.user
 
-    App\Content\Type\SingleAlbumSelection:
-        tags: [{name: 'sulu.content.type', alias: 'single_album_selection'}]
-
-    App\Content\Type\AlbumSelection:
-        tags: [{name: 'sulu.content.type', alias: 'album_selection'}]
+    sulu_message_bus:
+        alias: messenger.default_bus
