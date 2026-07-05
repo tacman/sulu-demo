@@ -55,6 +55,15 @@ cd sulu-demo
 composer install
 ```
 
+`composer install`/`composer update` automatically run `sulu:admin:update-build`
+(via the `auto-scripts` in `composer.json`), which regenerates the admin
+JavaScript/CSS bundle into `public/build/` — it is not checked into git.
+This step requires **Node.js/npm** and network access (it fetches
+`assets/admin/*` scaffolding from the `sulu/skeleton` repo and runs
+`npm install && npm run build`). If you're deploying to an environment
+without Node.js (e.g. most production servers), run this as a separate
+build step before deploying rather than relying on `composer install` there.
+
 ### Configure required services
 
 The demo requires a running **MySQL**  and **ElasticSearch** instance.
